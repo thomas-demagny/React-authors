@@ -3,6 +3,8 @@ import {initialState, reducer, AuthorsContext} from "./reducers/AuthReducer";
 
 const Provider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState);
+
+
     return (
         <AuthorsContext.Provider value={[state, dispatch]}>
             {children}
